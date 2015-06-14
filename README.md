@@ -15,13 +15,13 @@ cp lightdm-pantheon-bg-switcher.sh /usr/bin/lightdm-pantheon-bg-switcher
 ```
 chmod 755 /usr/bin/lightdm-pantheon-bg-switcher
 ```
-### Configure lightdm to run it when closing a session
+### Configure lightdm to run it when opening a session
 change in /etc/lightdm/lightdm.conf
 ```
 ...
 [SeatDefaults]
 ...
-#session-cleanup-script=
+#session-setup-script=
 ...
 ```
 to
@@ -29,7 +29,7 @@ to
 ...
 [SeatDefaults]
 ...
-session-cleanup-script=/usr/bin/lightdm-pantheon-bg-switcher
+session-setup-script=/usr/bin/lightdm-pantheon-bg-switcher
 ...
 ```
 
