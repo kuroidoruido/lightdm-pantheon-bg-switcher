@@ -5,15 +5,15 @@ This script offer possibility to auto-switch background of lightdm with Pantheon
 ## Install
 
 ### Configure your path
-Edit lightdm-switcher.sh to define your lightdm background directory (BG_DIR).
+Edit lightdm-pantheon-bg-switcher.sh to define your lightdm background directory (BG_DIR).
 
 ### Copy script into /usr/bin
 ```
-cp lightdm-switcher.sh /usr/bin/lightdm-switcher
+cp lightdm-pantheon-bg-switcher.sh /usr/bin/lightdm-pantheon-bg-switcher
 ```
 ### Make it executable
 ```
-chmod 755 /usr/bin/lightdm-switcher
+chmod 755 /usr/bin/lightdm-pantheon-bg-switcher
 ```
 ### Configure lightdm to run it when closing a session
 change in /etc/lightdm/lightdm.conf
@@ -29,7 +29,7 @@ to
 ...
 [SeatDefaults]
 ...
-session-cleanup-script=/usr/bin/lightdm-switcher
+session-cleanup-script=/usr/bin/lightdm-pantheon-bg-switcher
 ...
 ```
 
